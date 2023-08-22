@@ -1,0 +1,50 @@
+
+.conteudo{
+    text-align: center;
+    margin: auto;
+    padding-bottom: 0px;
+    width: 100%;
+    max-width: 550px;
+}
+
+ion-card{
+    border-radius: 15px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition-duration: 500ms ;
+}
+
+ion-card:hover{
+    transform: scale(1.03);
+}
+
+.img-item{
+padding: 20px;
+padding-bottom: 0px;
+width: 100%;
+max-width: 400px;
+
+animation: animation-img-principal 3s infinite alternate;
+}
+
+ion-thumbnail{
+animation: animation-img-card 1s infinite alternate;
+}
+
+@keyframes animation-img-card {
+    0%{
+    transform: translate(0px, 0px);  
+    }
+    100%{
+    transform: translate(-0px, -0.5px);
+    }
+}
+
+@keyframes animation-img-principal {
+    0%{
+    transform:  translate(2px, 2px) scale(0.8) rotate(1deg);  
+    }
+    100%{
+    transform:  translate(-2px, -2px) scale(1.03) rotate(-1deg);
+    }
+}

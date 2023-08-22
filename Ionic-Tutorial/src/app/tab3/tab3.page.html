@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="titulo"> Receber Doações </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="conteudo">
+    <img
+      class="img-item"
+      src="https://drive.google.com/uc?id=1sHTj2Q5mnvQ7tGNRqc0zhGZLBBJjlP5V"
+      alt="Imagem Solidariedade"
+    />
+    <h1 class="texto-item">
+      Esta precisando de ajuda? Podemos te ajudar! Preencha os campos e fale com
+      um voluntário. 🙏
+    </h1>
+    
+      <form [formGroup]="form" (submit)="enviar()">
+        <ion-item>
+          <ion-label position="floating">Nome Completo</ion-label>
+          <ion-input type="text" formControlName="nome"></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label position="floating">Endereço</ion-label>
+          <ion-input type="text" formControlName="endereco"></ion-input>
+        </ion-item>
+        <ion-button
+          [disabled]="form.invalid || form.pending" expand="block" type="submit">Salvar</ion-button
+        >
+      </form>
+      <ion-button (click)="whats()" expand="block" type="submit">Falar com Voluntario</ion-button>
+    </div>
+</ion-content>
